@@ -39,15 +39,6 @@ int main()
     		scanf("%d %d",&a,&b);
     	}
     	
-    	printf("Matriz Padrao:\n");
-    	for(i=1;i<=vertMaior;i++)
-    	{
-    	    for(j=1;j<=vertMaior;j++)
-    	    {
-    	        printf("%d\t",mat[i][j]);
-    	    }
-    	    printf("\n");
-    	}
     	
     	for(i=1;i<=vertMaior;i++)		//Adiciona os valores ao custo;
     	{
@@ -58,15 +49,6 @@ int main()
     		}
     	}
     	
-    		printf("\nMatriz Custo:\n");
-    	for(i=1;i<=vertMaior;i++)
-    	{
-    	    for(j=1;j<=vertMaior;j++)
-    	    {
-    	        printf("%d\t",custo[i][j]);
-    	    }
-    	    printf("\n");
-    	}
     	
     	for(k=1;k<=vertMaior;k++){
     		for(i=1;i<=vertMaior;i++){
@@ -77,7 +59,7 @@ int main()
     	}
     	
     
-    	printf("\nMatriz Custo\n");
+
     	for(i=1;i<=vertMaior;i++)
     	{
     	    for(j=1;j<=vertMaior;j++)
@@ -95,14 +77,14 @@ int main()
     	            }
     	                
     	        }
-    	        printf("%d\t",custo[i][j]);
     	            
     	 }
-    	    printf("\n");
+
     	}
     	float resultado = cont/contdenom;
     		printf("Case %d: average length between pages = %.3f clicks",contCase++,resultado);
 	}
+	return 0;
 }
 
 
