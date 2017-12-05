@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include<string.h>
 #define N 1000
@@ -18,6 +19,7 @@ int nump=0;
 
 void DFS(int v)
 {
+    	printf("Dentro do DFS\nP=%d\n",P);
 visit[v]=1;
 int i;
 for (i=0;i<P;i++)
@@ -39,11 +41,11 @@ for (i=0;i<P;i++)
 
 int verificaLugarNaMatriz(char string[11],int q,char matNomes[N][11])
 {
-	printf("P=%d\n",q);
+	printf("String=%s\n",string);
 	for(int i=0;i<q;i++)
 	{
 		printf("%d vez que entrou!\n",i);
-		if(strcmp(string,matNomes[i])) return i;
+		if(strcmp(string,matNomes[i])==0) return i;
 	}
 	return 1001;	
 }
@@ -54,8 +56,7 @@ int main() {
 	scanf("%d %d",&P,&T);
 	char matNomes[P][11];
 	char string1[11],string2[11];
-	int count;
-	
+	int count,inicial;
 	for(i=0;i<P;i++)
 	{
 		strcpy(matNomes[i],"");
@@ -76,11 +77,10 @@ int main() {
 		gets(matNomes[count]);
 			setbuf(stdin,NULL);
 	}
-	printf("Strings digitadas.\n");
+/*	printf("Strings digitadas.\n");
 	for(i=0;i<P;i++)
-		printf("%s\n",matNomes[i]);
-		printf("P=%d",P);
-
+		printf("%s, posicao %d\n",matNomes[i],i);
+*/
 	setbuf(stdin,NULL);
 	for(i=0;i<T;i++)
 	{
@@ -95,20 +95,15 @@ int main() {
 			printf("String1=%s\nLugar na matriz=%d",string1,a);
 			int b = verificaLugarNaMatriz(string2,P,matNomes);
 			printf("String2=%s\nLugar na matriz=%d",string2,b);
-			
 			matAdj[a][b]=1;
 		}
 		strcpy(string1,"");
 		strcpy(string2,"");
 
 	}
-		printf("P=%d",P);
-
-	for(i=0;i<P;i++)
-		printf("\n");
-		for(j=0;j<P;j++)
-			printf("%d\t",matAdj[i][j]);
 	DFS(0);
+	printf("\nposnum!\n");
+	for(i=0;i<P;i++) printf("%d\t",posnum[i]);
 
 	for (i=0;i<P;i++)					//Cria matriz transposta
 	   for (j=0;j<P;j++)
@@ -137,9 +132,10 @@ int main() {
 	   for(i=0;i<P;i++) 
 			if(visit[i]==0) cont++;
 		
-		printf("Cont:%d");	
+		printf("Cont:%d",cont);	
 	  return 0;
 }
+
 
 
 
