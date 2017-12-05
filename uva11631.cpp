@@ -34,28 +34,11 @@ int main()
 		scanf("%d",&z);  //6 
 	}
 	
-/*	printf("\nMATRIZ\n");
-        for(int q=0;q<m;q++)
-        {
-			for(int c=0;c<m;c++)
-			{
-				printf("%d\t",mat[q][c]);
-    		}
-			printf("\n");
-		}
 	
-	  printf("TABELA valor:\n");
-	for(int k=0;k<m;k++)
-		printf("%d = %d\n",k,valor[k]);
-*/	
 	for(int i=0;i<m;i++){                 //Verifica se há uma aresta entre esses vértices.
         if(mat[inicial][i]!=-1) valor[i]=mat[inicial][i];
     }
-    
-  /*  printf("TABELA valor:\n");
-	for(int k=0;k<m;k++)
-		printf("%d = %d\n",k,valor[k]);
- */   
+
     int ar=0;
     int i;
     while(ar<m-1){
@@ -68,7 +51,6 @@ int main()
             }
         
         }
-    //    printf("PEGOU O VERTICE %d = %d",Vmenor,menor);
         
         visitado[Vmenor]=1;
         ar++;
@@ -78,9 +60,9 @@ int main()
     	{
             if(mat[Vmenor][i]!=-1 && visitado[i]==0 && mat[Vmenor][i]<valor[i])  //Atualiza valor e visitado
             {
-    //        	printf("\nENTREI com i=%d\n",i);
+
                 valor[i]=mat[Vmenor][i];
-                //    op[i]=Vmenor;
+
             }
         }
     }
@@ -91,11 +73,10 @@ int main()
 	
 
 
-	//	printf("Cont=%d Contador=%d",cont,contador);
-    //	printf("RESULTADO FINAL=%d\n",cont-contador);
+
 
 printf("%d",cont-contador);
-   // printf("Hello World");
+
 
     return 0;
 }
