@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main()
@@ -5,7 +6,6 @@ int main()
     
     	int m,n,x,y,z;
 	
-	printf("Digite o número de vértices e arestas.\n");
 	scanf("%d %d",&m,&n);  // m - vértices / n - arestas
 	int mat[m][m];
 	int visitado[m],valor[m];
@@ -19,7 +19,6 @@ int main()
         visitado[i]=0;
         valor[i]=1000000;
     }
-	printf("Digite os vértices e seu valor\n");	
 	scanf("%d %d %d",&x,&y,&z);  //0 1 2 
 	int inicial = x;
 	visitado[inicial]=1;
@@ -30,7 +29,6 @@ int main()
 		mat[x][y]=z;					
 		mat[y][x]=z;
 		cont+=z;
-		printf("Digite os vértices e seu valor\n");		
 		scanf("%d %d",&x,&y);    // 0 2 
 		if(x==0 && y==0) break;
 		scanf("%d",&z);  //6 
@@ -92,13 +90,11 @@ int main()
 		contador+=valor[j];
 	
 
-	printf("TABELA valor:\n");
-	for(int k=0;k<m;k++)
-		printf("Valor[%d] = %d\n",k,valor[k]);
+
 	//	printf("Cont=%d Contador=%d",cont,contador);
     //	printf("RESULTADO FINAL=%d\n",cont-contador);
 
-printf("RESULTADO=%d",cont-contador);
+printf("%d",cont-contador);
    // printf("Hello World");
 
     return 0;
