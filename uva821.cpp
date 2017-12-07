@@ -82,15 +82,15 @@ int main()
 
     	}
     	
-    	for(i=1;i<=vertMaior;i++)
+    /*	for(i=1;i<=vertMaior;i++)
     	{
     	    printf("\n");
     	    for(j=1;j<=vertMaior;j++)
     	        printf("%d\t",custo[i][j]);
     	}
-    	float resultado = cont/contdenom;
-    	    printf("Cont=%f\ncontDenom=%f\n",cont,contdenom);
+    */	float resultado = cont/contdenom;
+    	    //printf("Cont=%f\ncontDenom=%f\n",cont,contdenom);
     		printf("Case %d: average length between pages = %.3f clicks\n",contCase++,resultado);
 	}
-	return 0;
+	return (0);
 }
