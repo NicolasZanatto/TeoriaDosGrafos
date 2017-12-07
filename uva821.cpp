@@ -3,8 +3,8 @@
 int main()
 {
 	int i,j,a,b,N,k;
-	int mat[100][100];
-	int custo[100][100];
+//	int mat[110][110];
+	int custo[110][110];
 	float cont=0;
 	int vertMaior=0;
 	float contdenom=0;
@@ -19,7 +19,7 @@ int main()
 	for(i=1;i<=100;i++)
 		for(j=1;j<=100;j++)
 		{
-		    mat[i][j]=0;
+		 //   mat[i][j]=0;
 			custo[i][j]=0;
 		}
 		
@@ -27,7 +27,7 @@ int main()
     	if(a==0 && b==0) break;
     	while(a!=0 && b!=0)				//adiciona os valores a matriz padrao
     	{
-    		mat[a][b]=1;
+    		custo[a][b]=1;
     		if(a>b)
     		{
     			if(a>vertMaior) vertMaior=a;
@@ -40,12 +40,12 @@ int main()
     	}
     	
     	
-    	for(i=1;i<=vertMaior;i++)		//Adiciona os valores ao custo;
+   	for(i=1;i<=vertMaior;i++)		//Adiciona os valores ao custo;
     	{
     		for(j=1;j<=vertMaior;j++)
     		{
-    		    if(mat[i][j]==0) custo[i][j]=1000;
-    		    else custo[i][j]=mat[i][j];
+    		    if(custo[i][j]==0) custo[i][j]=1000;
+    		//    else custo[i][j]=mat[i][j];
     		}
     	}
     	
@@ -81,10 +81,16 @@ int main()
     	 }
 
     	}
+    	
+    	for(i=1;i<=vertMaior;i++)
+    	{
+    	    printf("\n");
+    	    for(j=1;j<=vertMaior;j++)
+    	        printf("%d\t",custo[i][j]);
+    	}
     	float resultado = cont/contdenom;
-    		printf("Case %d: average length between pages = %.3f clicks",contCase++,resultado);
+    	    printf("Cont=%f\ncontDenom=%f\n",cont,contdenom);
+    		printf("Case %d: average length between pages = %.3f clicks\n",contCase++,resultado);
 	}
 	return 0;
 }
-
-
