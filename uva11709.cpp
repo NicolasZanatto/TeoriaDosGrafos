@@ -69,7 +69,7 @@ int main() {
     	setbuf(stdin,NULL);			
     	for(count=0;count<P;count++)
     	{
-    		gets(matNomes[count]);
+    		fgets(matNomes[count],20,stdin);
     			setbuf(stdin,NULL);
     	}
     /*	printf("Strings digitadas.\n");
@@ -79,9 +79,9 @@ int main() {
     	setbuf(stdin,NULL);
     	for(i=0;i<T;i++)
     	{
-    		gets(string1);
+    		fgets(string1,20,stdin);
     		setbuf(stdin,NULL);	
-    		gets(string2);
+    		fgets(string2,20,stdin);
     		setbuf(stdin,NULL);	
     		
     		if(strcmp(string1,string2)){
