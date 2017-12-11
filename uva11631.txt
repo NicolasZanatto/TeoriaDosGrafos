@@ -1,0 +1,13 @@
+Árvore Geradora Mínima
+
+Enquanto o nº de vértices e de arestas forem diferente de zero
+--
+   -inicializa a matriz e os vetores;
+
+   -seleciona o primeiro vértice como inicial e a partir dos outros le os vértices escolhidos com o seu custo,
+ soma em um contador o custo total do grafo;
+
+   -adiciona o custo dos vértices adjacentes ao vértice inicial.
+   -procura o menor custo dentre esses, e atualiza na lista de custos com o valor dos vértices adjacentes a esse.
+   - soma o custo da árvore geradora minima e diminui no custo  total do grafo;
+   - mostra o resultado dessa operação;

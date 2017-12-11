@@ -1,0 +1,18 @@
+Componentes Fortemente Conexos 
+
+1º - lê o numero de nomes que será testado(Vértices) - P
+   - lê o número de relações de confiança entre as pessoas(Arestas) - T
+
+2º - Enquanto P!=0 && T!=0 faca:
+   - lê os nomes das pessoas e guarda em um vetor de strings
+   - retorna a posição de cada pessoa na matriz de strings e adiciona em uma matriz de adjacencias.
+
+3º - A partir do vértice inicial, faz uma busca em profundidade, representando no vetor posnum a sequencia 
+em que foi visitado o grafo no percurso pós-ordem.
+   - Constroi a transposta desse grafo 
+
+4º - Realiza a busca em profundidade da matriz transposta
+   - marca os vértices visitados
+   - incrementa o contador de componentes fortemente conexos
+
+5° - printa o contador de componentes fortemente conexos

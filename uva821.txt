@@ -1,0 +1,11 @@
+Floyd-Warshall
+
+Enquanto os vértices forem diferente de zero, faça:
+	-lê os vértices, adiciona o valor a esta aresta (Todas as arestas têm custo = 1)
+	-Guarda o vértice maior.
+	-calcula o valor minimo entre 2 vértices.
+
+	-guarda a qntd de pares de vértices calculado.
+	-conta o custo total desses pares de vértices.
+
+	-printa o custo total/qntd de pares de vértices.
