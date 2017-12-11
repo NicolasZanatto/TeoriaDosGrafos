@@ -20,7 +20,7 @@ int main()
 		for(j=1;j<=100;j++)
 		{
 		 //   mat[i][j]=0;
-			custo[i][j]=0;
+			custo[i][j]=1000;
 		}
 		
     	scanf("%d %d",&a,&b);
@@ -38,17 +38,6 @@ int main()
     		
     		scanf("%d %d",&a,&b);
     	}
-    	
-    	
-   	for(i=1;i<=vertMaior;i++)		//Adiciona os valores ao custo;
-    	{
-    		for(j=1;j<=vertMaior;j++)
-    		{
-    		    if(custo[i][j]==0) custo[i][j]=1000;
-    		//    else custo[i][j]=mat[i][j];
-    		}
-    	}
-    	
     	
     	for(k=1;k<=vertMaior;k++){
     		for(i=1;i<=vertMaior;i++){
